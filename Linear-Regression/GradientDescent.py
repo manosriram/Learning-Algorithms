@@ -10,10 +10,11 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         x = X[1]
         h = np.dot(X, theta)
         theta = theta - (alpha / m) * np.dot(X.T, (h - y))
+        print('Theta : {}').format(theta)
 
         J_H.append(computeCost(X, y, theta))
 
-    return theta, J_H
+    return J_H
 
 
 df = pd.read_csv("ex1data1.txt", names=['X', 'y'])
@@ -26,5 +27,7 @@ alpha = 0.01
 iterations = 1500
 
 theta = np.zeros(2)
+th = gradientDescent(X, y, theta, alpha, iterations)
 
-print(gradientDescent(X, y, theta, alpha, iterations)[0])
+for i in th:
+    print(i)
