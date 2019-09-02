@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("./bostonHousing.csv")
+data = pd.read_csv("../Datasets/bostonHousing.csv")
 housing_colnames = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM',
                     'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
 data.columns = housing_colnames
