@@ -21,15 +21,14 @@ class NeuralNetwork():
             error = trainingOutputs - outputs
             adjustments = np.dot(trainingInputs.T, error *
                                  self.sigmoidDerivative(outputs))
-
             self.synaptic_weights += adjustments
 
         return outputs
 
     def think(self, inputs):
         inputs = inputs.astype(float)
-        output = self.sigmoid(np.dot(inputs, self.synaptic_weights))
-
+        output = self.sigmoid(
+            np.dot(inputs, self.synaptic_weights))
         return output
 
 
@@ -45,7 +44,7 @@ if __name__ == "__main__":
                                [0, 1, 1],
                                [0, 1, 0]])
 
-    trainingOutputs = np.array([[0, 1, 1, 0, 1]]).T
+    trainingOutputs = np.array([[0, 1, 1, 0, 0]]).T
 
     neural_net.train(trainingInputs, trainingOutputs, 5000)
 
