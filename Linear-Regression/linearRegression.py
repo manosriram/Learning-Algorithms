@@ -11,7 +11,6 @@ data.columns = housing_colnames
 def predictPrice(x, theta):
     return np.dot(x, theta)
 
-
 def plotData(x, theta, y):
     yV = predictPrice(x, theta)
     plt.xlim(0, 20)
