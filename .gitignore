@@ -1,4 +1,4 @@
 /deactivate
 /learnenv
 /ExerciseFiles
-/.ipynb_checkpoints
+/.*
